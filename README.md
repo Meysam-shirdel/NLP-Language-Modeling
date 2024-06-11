@@ -4,10 +4,8 @@
 <h1 align="center">Language Modeling</h1>
 </div>
 
-Language modeling is one of the benchmark tasks of NLP. In its simplest form, it consists of predicting the most probable word following a series of words based on them.Language modeling is one of the prominent tasks in the field of artificial intelligence, especially NLP. The purpose of language modeling is to create and train a model that creates a meaningful expression. In such a way that it takes an incomplete sentence and by adding words to the end of it, presents a complete and coherent sentence with a concept that can be understood.
+Language modeling is one of the benchmark tasks of NLP. In its simplest form, it consists of predicting the most probable word following a series of words based on them. The purpose of language modeling is to create and train a model that generates a meaningful expression. In such a way that it takes an incomplete sentence and by adding words to the end of it, presents a complete and coherent sentence with a concept that can be understood.
 
-
-This repository serves as the template for the third project in the Deep Catalyst course, focusing on medical image segmentation. Explore and utilize this template to kickstart your own medical image segmentation projects, leverage best practices, and accelerate your journey into the world of precise medical diagnostics through deep learning.
 
 ## 1. Problem Statement
 In this section, you'll find a comprehensive overview of the problem being addressed in the project.
