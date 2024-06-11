@@ -6,6 +6,7 @@
 
 ## 1. Problem Statement
 Language modeling is a fundamental task in natural language processing (NLP) that involves predicting the next word in a sequence given the preceding words. The purpose of language modeling is to create and train a model that generates a meaningful expression. In such a way that it takes an incomplete sentence and by adding words to the end of it, presents a complete and coherent sentence with a concept that can be understood.
+
 This task is crucial for various applications, including text generation, speech recognition, machine translation, and more. Recent advances in language modeling have been driven by large-scale pre-trained models like BERT, GPT-3, and their successors. These models are trained on vast datasets and can be fine-tuned for various specific tasks, demonstrating remarkable capabilities in understanding and generating human-like text. The shift from traditional statistical models to sophisticated neural architectures has led to significant improvements in the ability of machines to understand and generate human language.
 
 ## 2. Related Works
