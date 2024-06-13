@@ -73,8 +73,12 @@ This example demonstrates a basic LSTM model for language modeling, where the em
 This section delves into the practical aspects of the project's implementation.
 
 ### 4.1. Dataset
-Under this subsection, you'll find information about the dataset used for the medical image segmentation task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it.
-[Dataset](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/data)
+Under this subsection, you'll find information about the dataset used for Language Modeling task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it.
+
+The WikiText-2 dataset is a popular benchmark dataset for language modeling tasks. This dataset is more representative of modern English, containing long-term dependencies and requiring a deep understanding of context for accurate predictions. You can download and load the WikiText-2 dataset using libraries such as [torchtext](https://paperswithcode.com/dataset/wikitext-2) or [datasets](https://www.kaggle.com/datasets/rohitgr/wikitext?select=wikitext-2) from kaggle.
+
+
+
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
