@@ -80,19 +80,19 @@ The WikiText-2 dataset is a popular benchmark dataset for language modeling task
 In this work, I downloaded it from kaggle contains 3 (train, valid and test) splits. 
 WikiText-2 consists of approximately:
 
-**Train Split:** 36718 lines
+- **Train Split:** 36718 lines
 
-**Validation Split:** 3760 lines
+- **Validation Split:** 3760 lines
 
-**Test Split:** 4358 lines
+- **Test Split:** 4358 lines
 
 If you need a rough estimate, here are the approximate token counts based on the original dataset documentation:
 
-    **Train Split:** Approximately 2,088,628 tokens
+- **Train Split:** Approximately 2,088,628 tokens
 
-    **Validation Split:** Approximately 217,646 tokens
+- **Validation Split:** Approximately 217,646 tokens
 
-    **Test Split:** Approximately 245,569 tokens
+- **Test Split:** Approximately 245,569 tokens
 
 
 **Tokenizing**
@@ -107,6 +107,8 @@ For tokenizing the dataset, I used a simple generator method using **yield**.
 
     vocabs = build_vocab_from_iterator(map(tokenizer,text_read_iterator('/content/wikitext-2/wiki.train.tokens'))
     ,min_freq=1, specials=["<unk>"])
+
+
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
