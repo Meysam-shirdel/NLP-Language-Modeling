@@ -81,23 +81,30 @@ In this work, I downloaded it from kaggle contains 3 (train, valid and test) spl
 WikiText-2 consists of approximately:
 
 **Train Split:** 36718 lines
+
 **Validation Split:** 3760 lines
+
 **Test Split:** 4358 lines
 
 If you need a rough estimate, here are the approximate token counts based on the original dataset documentation:
 
 **Train Split:** Approximately 2,088,628 tokens
+
 **Validation Split:** Approximately 217,646 tokens
+
 **Test Split:** Approximately 245,569 tokens
+
 
 **Tokenizing**
 For tokenizing the dataset, I used a simple generator method using **yield**.
+
     def text_read_iterator(token_path ):
       with io.open(token_path, encoding = 'utf-8') as f:
         for line in f:
           yield line
           
 tokenizer= get_tokenizer('basic_english')
+
 vocabs = build_vocab_from_iterator(map(tokenizer,text_read_iterator('/content/wikitext-2/wiki.train.tokens'))
 ,min_freq=1, specials=["<unk>"])
 
