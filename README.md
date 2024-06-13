@@ -96,7 +96,8 @@ If you need a rough estimate, here are the approximate token counts based on the
 
 
 **Tokenizing**
-For tokenizing the dataset, I used a simple generator method using **yield**.
+
+For tokenizing the dataset, I used a simple generator method using **yield**. It reads every line from determined dataset split, tokenize, and , make vocabulary by pytorch build_vocab_from_iterator function.
 
     def text_read_iterator(token_path ):
       with io.open(token_path, encoding = 'utf-8') as f:
