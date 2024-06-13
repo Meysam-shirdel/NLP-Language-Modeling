@@ -77,8 +77,7 @@ Under this subsection, you'll find information about the dataset used for Langua
 
 The WikiText-2 dataset is a popular benchmark dataset for language modeling tasks. This dataset is more representative of modern English, containing long-term dependencies and requiring a deep understanding of context for accurate predictions. You can load the WikiText-2 dataset using libraries such as [torchtext](https://paperswithcode.com/dataset/wikitext-2) or download from [kaggle](https://www.kaggle.com/datasets/rohitgr/wikitext?select=wikitext-2).
 
-In this work, I downloaded it from kaggle contains 3 (train, valid and test) splits. 
-WikiText-2 consists of approximately:
+In this work, I downloaded it from kaggle contains 3 splits called **wiki.train.tokens**, **wiki.valid.tokens**, and **wiki.test.tokens** each of which consists of approximately:
 
 - **Train Split:** 36718 lines
 
