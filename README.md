@@ -39,20 +39,52 @@ Long Short-Term Memory (LSTM)
 Basic Explanation:
 Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture designed to effectively capture long-term dependencies in sequential data. Traditional RNNs struggle with long-term dependencies due to the vanishing gradient problem, where gradients become very small and stop the learning process during backpropagation. LSTMs address this issue by using a more complex architecture that includes:
 
-    Cell State: A direct path that allows information to flow unchanged.
-
-    Gates: Mechanisms to control the flow of information:
-
-    Forget Gate: Decides what information to throw away from the cell state.
-
-    Input Gate: Decides which values from the input to update the cell state.
-
-    Output Gate: Decides what part of the cell state to output.
+1. **Cell State:** A direct path that allows information to flow unchanged.
+2. **Gates:** Mechanisms to control the flow of information:
+   - **Forget Gate:** Decides what information to throw away from the cell state.
+   - **Input Gate:** Decides which values from the input to update the cell state.
+   - **Output Gate:** Decides what part of the cell state to output.
 
 This architecture allows LSTMs to maintain and update information over long sequences, making them suitable for tasks like language modeling and text generation.
- <img  align=center src="LSTM.jpg" alt="Logo" width="" height="200">
+ 
+<div align="center">
+   <img  align=center src="LSTM.jpg" alt="Logo"  height="300">
+</div>
 
+### Long Short-Term Memory (LSTM)
 
+Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture designed to effectively capture long-term dependencies in sequential data. Traditional RNNs struggle with long-term dependencies due to the vanishing gradient problem, where gradients become very small and stop the learning process during backpropagation. LSTMs address this issue by using a more complex architecture that includes:
+
+1. **Cell State:** A direct path that allows information to flow unchanged.
+2. **Gates:** Mechanisms to control the flow of information:
+   - **Forget Gate:** Decides what information to throw away from the cell state.
+   - **Input Gate:** Decides which values from the input to update the cell state.
+   - **Output Gate:** Decides what part of the cell state to output.
+
+This architecture allows LSTMs to maintain and update information over long sequences, making them suitable for tasks like language modeling and text generation.
+
+**Key Components:**
+- **Forget Gate:** \( f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f) \)
+- **Input Gate:** \( i_t = \sigma(W_i \cdot [h_{t-1}, x_t] + b_i) \)
+- **Cell State Update:** \( \tilde{C}_t = \tanh(W_C \cdot [h_{t-1}, x_t] + b_C) \)
+- **Cell State:** \( C_t = f_t * C_{t-1} + i_t * \tilde{C}_t \)
+- **Output Gate:** \( o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \)
+- **Hidden State:** \( h_t = o_t * \tanh(C_t) \)
+
+### Embedding Models
+
+Embedding models are used to convert categorical data, particularly text, into continuous vectors in a high-dimensional space. These vectors capture the semantic meaning of the words, where words with similar meanings are located closer together in the vector space. Word embeddings help transform textual data into a format that can be easily processed by machine learning algorithms.
+
+### Combining LSTM and Embedding Layers for Language Modeling
+
+When using LSTM for language modeling or text completion, an embedding layer is often used as the first layer to convert input words into dense vectors. These embeddings are then fed into the LSTM, which processes the sequence and generates predictions.
+
+**Example Architecture:**
+1. **Embedding Layer:** Converts input words into dense vectors.
+2. **LSTM Layer(s):** Processes the sequence of embeddings to capture dependencies.
+3. **Fully Connected Layer:** Maps the LSTM outputs to the desired output space (e.g., vocabulary size for next word prediction).
+
+This example demonstrates a basic LSTM model for language modeling, where the embedding layer converts words to dense vectors, and the LSTM processes these vectors to predict the next word in the sequence.
 ## 4. Implementation
 This section delves into the practical aspects of the project's implementation.
 
