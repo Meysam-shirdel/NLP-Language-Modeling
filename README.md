@@ -35,7 +35,18 @@ This table and the detailed descriptions provide a comprehensive overview of the
 
 
 ## 3. The Proposed Method
-Here, the proposed approach for solving the problem is detailed. It covers the algorithms, techniques, or deep learning models to be applied, explaining how they address the problem and why they were chosen.
+Long Short-Term Memory (LSTM)
+Basic Explanation:
+Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) architecture designed to effectively capture long-term dependencies in sequential data. Traditional RNNs struggle with long-term dependencies due to the vanishing gradient problem, where gradients become very small and stop the learning process during backpropagation. LSTMs address this issue by using a more complex architecture that includes:
+
+Cell State: A direct path that allows information to flow unchanged.
+Gates: Mechanisms to control the flow of information:
+Forget Gate: Decides what information to throw away from the cell state.
+Input Gate: Decides which values from the input to update the cell state.
+Output Gate: Decides what part of the cell state to output.
+This architecture allows LSTMs to maintain and update information over long sequences, making them suitable for tasks like language modeling and text generation.
+ <img  align=center src="lm.jpg" alt="Logo" width="" height="200">
+
 
 ## 4. Implementation
 This section delves into the practical aspects of the project's implementation.
