@@ -50,7 +50,7 @@ Long Short-Term Memory (LSTM) is a type of recurrent neural network (RNN) archit
     Output Gate: Decides what part of the cell state to output.
 
 This architecture allows LSTMs to maintain and update information over long sequences, making them suitable for tasks like language modeling and text generation.
- <img  align=center src="lstm.jpg" alt="Logo" width="" height="200">
+ <img  align=center src="LSTM.jpg" alt="Logo" width="" height="200">
 
 
 ## 4. Implementation
