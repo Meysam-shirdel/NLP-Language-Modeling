@@ -146,11 +146,20 @@ To use GPU we can set device with this code:
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the language model. This section covers the process of training the model on the provided dataset.
 
-The training process consists of Finding Hyper-parameters and Main loop section. in Finding Hyper-parameters section, we used different scenarios to obtain best hyper-parameters like learning rate and weight decay. The result of this section is used to train the model in Main Loop.
+The training process consists of Finding Hyper-parameters and Main loop section. in Finding Hyper-parameters section, we used different scenarios to obtain best hyper-parameters like learning rate, weight decay, and, momentum. The result of this section is used to train the model in Main Loop.
 
-- learning rate : 3.0 
-- weight decay: 1e-6
-give the best loss and metric.
+I made a grid of LR and WD like below
+- learning rate : 5, 3, 0.9, 
+- weight decay: 1e-6, 1e-5, 1e-4
+
+The best perplexity= 143.1 for above grid obtained with LR= 3, WD= 1e-6, and momentum=0.9, dropout_rnn=0.2
+
+Then, after training the best model from previous step for another list of learning rates= 2, 0.9, 0.5, 0.3, 0.08,  it showed that LR=0.5 is bether than others.
+
 
 ### 4.5. Evaluate
-In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
+In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's results are quantified and provides insights into the model's effectiveness.
+
+The best perplexity= 130.2 for validation obtained with LR= 0.5, WD= 1e-6, and momentum=0.9, dropout_rnn=0.2
+
+
