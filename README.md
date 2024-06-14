@@ -119,6 +119,7 @@ in this project, a simple LSTM-based custom model is created. this model consist
 - **a fully connected layer**
 
 Overal structure of custom model is as below but you can find detailed structure in **language_modeling.ipynb** file.
+
     class LanguageModel(nn.Module):
         def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_embd=0.5, dropout_rnn=0.5):
             super(LanguageModel, self).__init__()
