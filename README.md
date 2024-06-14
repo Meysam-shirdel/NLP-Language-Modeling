@@ -110,7 +110,24 @@ For tokenizing the dataset, I used a simple generator method using **yield**. It
 
 
 ### 4.2. Model
-In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
+Here, the architecture and specifics of the deep learning model employed for the language modeling task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
+
+in this project, a simple LSTM-based custom model is created. this model consists of three parts:
+
+- **an embedding layer**
+- **an LSTM layer**
+- **a fully connected layer**
+
+Overal structure of custom model is as below but you can find detailed structure in **language_modeling.ipynb** file.
+    class LanguageModel(nn.Module):
+        def __init__(self, vocab_size, embedding_dim, hidden_dim, num_layers, dropout_embd=0.5, dropout_rnn=0.5):
+            super(LanguageModel, self).__init__()
+            self.embedding = nn.Embedding(vocab_size, embedding_dim)
+            self.Embedding.weight.data.uniform_(-0.1,0.1)
+            self.dropout= nn.Dropout(p= dropout_embd)
+            self.lstm = nn.LSTM(embedding_dim, hidden_dim,num_layers=num_layers, dropout= dropout_rnn, batch_first=True)
+            self.fc = nn.Linear(hidden_dim, vocab_size)
+
 
 ### 4.3. Configurations
 This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
