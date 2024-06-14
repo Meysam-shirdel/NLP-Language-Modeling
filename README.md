@@ -160,6 +160,6 @@ Then, after training the best model from previous step for another list of learn
 ### 4.5. Evaluate
 In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's results are quantified and provides insights into the model's effectiveness.
 
-The best perplexity= 130.2 for validation obtained with LR= 0.5, WD= 1e-6, and momentum=0.9, dropout_rnn=0.2
+The best perplexity= 128.7 for validation obtained with LR= 0.5, WD= 1e-6, and momentum=0.9, dropout_rnn=0.2
 
-
+For further assessments and acheive bether results, we plan to use the state-of-the-art methods in recent articles.
