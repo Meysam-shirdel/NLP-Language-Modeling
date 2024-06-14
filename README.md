@@ -105,8 +105,7 @@ For tokenizing the dataset, I used a simple generator method using **yield**. It
           
     tokenizer= get_tokenizer('basic_english')
 
-    vocabs = build_vocab_from_iterator(map(tokenizer,text_read_iterator('/content/wikitext-2/wiki.train.tokens'))
-    ,min_freq=1, specials=["<unk>"])
+    vocabs = build_vocab_from_iterator(map(tokenizer,text_read_iterator('/content/wikitext-2/wiki.train.tokens')),min_freq=1, specials=["<unk>"])
 
 
 
