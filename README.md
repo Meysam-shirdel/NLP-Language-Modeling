@@ -144,7 +144,13 @@ To use GPU we can set device with this code:
 
 
 ### 4.4. Train
-Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
+Here, you'll find instructions and code related to the training of the language model. This section covers the process of training the model on the provided dataset.
+
+The training process consists of Finding Hyper-parameters and Main loop section. in Finding Hyper-parameters section, we used different scenarios to obtain best hyper-parameters like learning rate and weight decay. The result of this section is used to train the model in Main Loop.
+
+- learning rate : 3.0 
+- weight decay: 1e-6
+give the best loss and metric.
 
 ### 4.5. Evaluate
 In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
