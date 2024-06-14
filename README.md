@@ -133,6 +133,16 @@ Overal structure of custom model is as below but you can find detailed structure
 ### 4.3. Configurations
 This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
 
+- loss_fn = torch.nn.CrossEntropyLoss()
+
+- metric = torchmetrics.text.Perplexity().to(device)
+
+- optimizer = torch.optim.SGD(model.parameters(),lr=0.5, weight_decay=0, momentum=0.9)
+
+To use GPU we can set device with this code:
+- device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
 
